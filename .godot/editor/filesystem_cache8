@@ -1,0 +1,17 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1750831347
+Blue and Orange Circle Icon Business Logo_20250624_234128_0000.png::CompressedTexture2D::6576661146033820635::1750830179::1750830238::1::::<><>::
+export_presets.cfg::TextFile::-1::1750831276::0::1::::<><>::
+main.tscn::PackedScene::471933::1750830926::0::1::::<><>::uid://startmenu::::res://start_menu.tscn
+mun_panel.tscn::PackedScene::661787010775::1750830926::0::1::::<><>::res://scripts/mun_panel.gd<>uid://cdvy8jofjjh41::::res://assets/bell.wav<>uid://ciuceyirudefh::::res://Sobre sin texto acuarela suave azul rosa centrado.png
+Sobre sin texto acuarela suave azul rosa (1).png::CompressedTexture2D::5530284098599787118::1750829073::1750829146::1::::<><>::
+Sobre sin texto acuarela suave azul rosa centrado.png::CompressedTexture2D::5375769522450899641::1750829461::1750829544::1::::<><>::
+start_menu.tscn::PackedScene::33143032210190::1750830926::0::1::::<><>::res://scripts/start_menu.gd<>uid://ck158au4ybvhe::::res://Sobre sin texto acuarela suave azul rosa (1).png
+::res://assets/::1750791473
+bell.wav::AudioStreamWAV::5028276464737791368::1750791183::1750791473::1::::<><>::
+::res://Scripts/::1750830734
+Global.gd::GDScript::-1::1750790325::0::1::::<>Node<>::
+mun_panel.gd::GDScript::-1::1750830734::0::1::::<>Control<>::
+start_menu.gd::GDScript::-1::1750830365::0::1::::<>Control<>::
+::res://Web/::1750831244
+::res://Windows/::1750831220

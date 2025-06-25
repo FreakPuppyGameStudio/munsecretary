@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=3 uid="uid://munpanel"]
+
+[ext_resource type="Script" uid="uid://bsc5j5yjrkxi3" path="res://Scripts/mun_panel.gd" id="1"]
+[ext_resource type="AudioStream" uid="uid://cdvy8jofjjh41" path="res://assets/bell.wav" id="2"]
+[ext_resource type="Texture2D" uid="uid://ciuceyirudefh" path="res://Sobre sin texto acuarela suave azul rosa centrado.png" id="2_nwur1"]
+
+[node name="MUNPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(627, 386)
+texture = ExtResource("2_nwur1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 381.0
+offset_bottom = 563.0
+
+[node name="LineEdit2" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+placeholder_text = "General Assembly"
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+placeholder_text = "Spain"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Add Speaker"
+
+[node name="ItemList" type="ItemList" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="SaveButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Save"
+
+[node name="ClearOradoresButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Clear"
+
+[node name="TimerLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Time: 60s"
+
+[node name="StartPause" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="Reset" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Reset"
+
+[node name="Votacion" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="FavorButton" type="Button" parent="VBoxContainer/Votacion"]
+layout_mode = 2
+text = "In  favor"
+
+[node name="ContraButton" type="Button" parent="VBoxContainer/Votacion"]
+layout_mode = 2
+text = "Against"
+
+[node name="AbstencionButton" type="Button" parent="VBoxContainer/Votacion"]
+layout_mode = 2
+text = "Abstención"
+
+[node name="ResultadosLabel" type="Label" parent="VBoxContainer/Votacion"]
+layout_mode = 2
+text = "✅ In  favor: 0  ❌Against: 0  ➖ Abstentions: 0"
+
+[node name="ReiniciarVotacionButton" type="Button" parent="VBoxContainer/Votacion"]
+layout_mode = 2
+text = "Reset  votatión"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2")
+
+[node name="ListaOradoresLateral" type="ItemList" parent="."]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+offset_left = 889.0
+offset_top = 13.0
+offset_right = 1389.0
+offset_bottom = 413.0
+theme_override_font_sizes/font_size = 35

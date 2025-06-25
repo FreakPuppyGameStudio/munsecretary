@@ -1,0 +1,20 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1750857602
+Blue and Orange Circle Icon Business Logo_20250624_234128_0000.png::CompressedTexture2D/CompressedTexture2D::6576661146033820635::1750830179::1750833377::1::::<><><>0<>0<>5db0ec1ea5a691406aae423a902fc38d<>res://.godot/imported/Blue and Orange Circle Icon Business Logo_20250624_234128_0000.png-7b201b79a685657ccbcd91e5484640d6.ctex::
+export_presets.cfg::TextFile/TextFile::-1::1750834265::0::1::::<><><>0<>0<><>::
+main.tscn::PackedScene::471933::1750833402::0::1::::<><><>0<>0<><>::uid://startmenu::::res://start_menu.tscn
+mun_panel.tscn::PackedScene::661787010775::1750834718::0::1::::<><><>0<>0<><>::uid://bsc5j5yjrkxi3::::res://Scripts/mun_panel.gd<>uid://cdvy8jofjjh41::::res://assets/bell.wav<>uid://ciuceyirudefh::::res://Sobre sin texto acuarela suave azul rosa centrado.png
+Sobre sin texto acuarela suave azul rosa (1).png::CompressedTexture2D/CompressedTexture2D::5530284098599787118::1750829073::1750833377::1::::<><><>0<>0<>53feff85a34e069dd984eab74aab6672<>res://.godot/imported/Sobre sin texto acuarela suave azul rosa (1).png-e4f620b7fc26c88e1034f21624c3f5fa.ctex::
+Sobre sin texto acuarela suave azul rosa centrado.png::CompressedTexture2D/CompressedTexture2D::5375769522450899641::1750829461::1750833377::1::::<><><>0<>0<>5199ad51113cad1d365c279188c2a27e<>res://.godot/imported/Sobre sin texto acuarela suave azul rosa centrado.png-11e51e4fd7c1aeb068783d54ab5990ef.ctex::
+start_menu.tscn::PackedScene::33143032210190::1750833402::0::1::::<><><>0<>0<><>::uid://bs0c16ggcfsre::::res://Scripts/start_menu.gd<>uid://ck158au4ybvhe::::res://Sobre sin texto acuarela suave azul rosa (1).png
+::res://assets/::1750833377
+bell.wav::AudioStreamWAV/AudioStreamWAV::5028276464737791368::1750791183::1750833377::1::::<><><>0<>0<>47ccc06770cc004332150e72659fbd88<>res://.godot/imported/bell.wav-a5abed0abf0fd76e18ae4cdd5b882126.sample::
+::res://Scripts/::1750833376
+Global.gd::GDScript/GDScript::1994947387030325462::1750790325::0::1::::<>Node<><>0<>0<><>::
+mun_panel.gd::GDScript/GDScript::3655787819821808264::1750830734::0::1::::<>Control<><>0<>0<><>::
+start_menu.gd::GDScript/GDScript::3701598815424422678::1750830365::0::1::::<>Control<><>0<>0<><>::
+::res://Web/::1750834710
+MUN Secretary Program.apple-touch-icon.png::CompressedTexture2D/CompressedTexture2D::1408406525792445639::1750834265::1750834710::1::::<><><>0<>0<>2299d1d3cad7cd8630223014d42df76a<>res://.godot/imported/MUN Secretary Program.apple-touch-icon.png-de6cf674871003d84d2f069021b7677c.ctex::
+MUN Secretary Program.icon.png::CompressedTexture2D/CompressedTexture2D::3411389408073933422::1750834265::1750834710::1::::<><><>0<>0<>49c28f98538e6e93532d7613b6bc2932<>res://.godot/imported/MUN Secretary Program.icon.png-826b25df138d9960895afe7cabb5cedd.ctex::
+MUN Secretary Program.png::CompressedTexture2D/CompressedTexture2D::8598250578711457573::1750834264::1750834710::1::::<><><>0<>0<>9403e4212e0ef4a23d24d685e4de3758<>res://.godot/imported/MUN Secretary Program.png-a86107ccf8b4c4d936982e000d4e9048.ctex::
+::res://Windows/::1750834106

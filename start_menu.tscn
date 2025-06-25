@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://startmenu"]
+
+[ext_resource type="Script" uid="uid://bs0c16ggcfsre" path="res://Scripts/start_menu.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://ck158au4ybvhe" path="res://Sobre sin texto acuarela suave azul rosa (1).png" id="2_7pg6h"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_y31r1"]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(610, 556)
+texture = ExtResource("2_7pg6h")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 571.0
+offset_top = 104.0
+offset_right = 741.0
+offset_bottom = 154.0
+text = "Nombre del comité"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 578.0
+offset_top = 192.0
+offset_right = 730.0
+offset_bottom = 248.0
+text = "Enter"
+icon = SubResource("ImageTexture_y31r1")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 561.0
+offset_top = 40.0
+offset_right = 749.0
+offset_bottom = 63.0
+text = "MUN Secretary Program"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 574.0
+offset_top = 271.0
+offset_right = 723.0
+offset_bottom = 345.0
+text = "Quit"
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
