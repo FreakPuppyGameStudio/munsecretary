@@ -54,6 +54,14 @@ text = "Start"
 layout_mode = 2
 text = "Reset"
 
+[node name="TiempoImput" type="SpinBox" parent="VBoxContainer"]
+layout_mode = 2
+max_value = 3630.0
+
+[node name="AplicarTiempoButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Apply Time"
+
 [node name="Votacion" type="VBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
@@ -87,4 +95,5 @@ offset_left = 889.0
 offset_top = 13.0
 offset_right = 1389.0
 offset_bottom = 413.0
-theme_override_font_sizes/font_size = 35
+
+[connection signal="pressed" from="VBoxContainer/AplicarTiempoButton" to="." method="_on_aplicar_tiempo_button_pressed"]

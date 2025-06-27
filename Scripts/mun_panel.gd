@@ -8,7 +8,9 @@ extends Control
 @onready var timer_label = $VBoxContainer/TimerLabel
 @onready var start_button = $VBoxContainer/StartPause
 @onready var reset_button = $VBoxContainer/Reset
-@onready var clear_button = $VBoxContainer/ClearOradoresButton  # Botón para limpiar la lista
+@onready var clear_button = $VBoxContainer/ClearOradoresButton
+@onready var tiempo_input = $VBoxContainer/TiempoImput
+@onready var aplicar_tiempo_button = $VBoxContainer/AplicarTiempoButton
 @onready var alarm = $AudioStreamPlayer
 
 @onready var btn_favor = $VBoxContainer/Votacion/FavorButton
@@ -17,7 +19,6 @@ extends Control
 @onready var label_resultados = $VBoxContainer/Votacion/ResultadosLabel
 @onready var reiniciar_btn = $VBoxContainer/Votacion/ReiniciarVotacionButton
 
-# Nuevo ItemList fuera del VBoxContainer
 @onready var oradores_lateral = $ListaOradoresLateral
 
 var oradores: Array = []
@@ -33,7 +34,12 @@ func _ready():
 	save_button.pressed.connect(_on_save)
 	start_button.pressed.connect(_on_start_pause)
 	reset_button.pressed.connect(_on_reset)
-	clear_button.pressed.connect(_on_clear_oradores_pressed)  # Conectar botón limpiar
+	clear_button.pressed.connect(_on_clear_oradores_pressed)
+
+	# Se añade un chequeo para evitar múltiples conexiones.
+	# Si ya la tienes conectada desde el editor de Godot, esta línea seguirá funcionando.
+	if not aplicar_tiempo_button.pressed.is_connected(_on_aplicar_tiempo_button_pressed):
+		aplicar_tiempo_button.pressed.connect(_on_aplicar_tiempo_button_pressed)
 
 	btn_favor.pressed.connect(_on_voto_favor)
 	btn_contra.pressed.connect(_on_voto_contra)
@@ -47,8 +53,8 @@ func _on_add():
 	if input.text.strip_edges() != "":
 		var nombre = input.text.strip_edges()
 		oradores.append(nombre)
-		list.add_item(nombre)  # Lista principal
-		oradores_lateral.add_item(nombre)  # Lista lateral (a un lado)
+		list.add_item(nombre)
+		oradores_lateral.add_item(nombre)
 		input.text = ""
 
 func _on_save():
@@ -93,11 +99,39 @@ func _on_clear_oradores_pressed():
 	oradores.clear()
 	list.clear()
 	oradores_lateral.clear()
-	
-	# Borra el archivo guardado para que no se recargue la lista
+
 	var path = "user://%s_oradores.json" % Global.comite
 	if FileAccess.file_exists(path):
 		DirAccess.remove_absolute(path)
+
+func _on_aplicar_tiempo_button_pressed():
+	var new_time = 0.0
+
+	# Determina el valor de entrada según el tipo de nodo
+	if tiempo_input is LineEdit:
+		# Intenta convertir el texto a float. Si falla, el valor por defecto será 0.0.
+		new_time = float(tiempo_input.text)
+	elif tiempo_input.has_method("get_value"): # Para SpinBox o controles similares
+		new_time = tiempo_input.get_value()
+	else:
+		print("Advertencia: El tipo de nodo para 'tiempo_input' no es compatible con '.value' o '.text'.")
+		return # Sale de la función si el tipo de nodo no es compatible
+
+	# --- Aplicar el nuevo máximo de 600 ---
+	# Asegurarse de que el tiempo sea un número válido y no negativo.
+	# Limita el valor máximo a 600.
+	new_time = max(0.0, min(new_time, 3630.0))
+
+	time_left = new_time
+	running = false
+	timer_label.text = "Tiempo: " + str(int(time_left)) + "s"
+
+	# NOTA: Si 'TiempoInput' es un SpinBox, es mejor configurar su propiedad
+	# 'max_value' a 600 directamente en el editor de Godot para que la interfaz
+	# de usuario refleje este límite.
+	# Ejemplo: Selecciona el nodo 'TiempoInput' en el editor,
+	# y en el Inspector, busca 'Max Value' bajo 'Range' y cámbialo a 600.
+
 
 func _on_voto_favor():
 	votos_a_favor += 1

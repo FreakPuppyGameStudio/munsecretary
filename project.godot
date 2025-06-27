@@ -14,12 +14,19 @@ config/name="MUN Secretary Program"
 config/version="1.0"
 run/main_scene="res://start_menu.tscn"
 config/features=PackedStringArray("4.4")
-boot_splash/image="res://Blue and Orange Circle Icon Business Logo_20250624_234128_0000.png"
-config/icon="res://Sobre sin texto acuarela suave azul rosa centrado.png"
+boot_splash/image="uid://ciuceyirudefh"
+config/icon="uid://ciuceyirudefh"
 
 [autoload]
 
 Global="*res://Scripts/Global.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/mode=3
+window/stretch/mode="viewport"
 
 [rendering]
 

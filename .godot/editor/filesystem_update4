@@ -1,3 +1,4 @@
-res://main.tscn
 res://mun_panel.tscn
+res://Scripts/mun_panel.gd
+res://main.tscn
 res://start_menu.tscn
