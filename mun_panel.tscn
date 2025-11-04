@@ -85,15 +85,98 @@ text = "✅ In  favor: 0  ❌Against: 0  ➖ Abstentions: 0"
 layout_mode = 2
 text = "Reset  votatión"
 
+[node name="Timer2Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="MinutesInput" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="AplicarTiempo2Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Apply Time"
+
+[node name="StartPause2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="Reset2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Reset"
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2")
 
 [node name="ListaOradoresLateral" type="ItemList" parent="."]
 custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
+layout_mode = 0
 offset_left = 889.0
 offset_top = 13.0
 offset_right = 1389.0
 offset_bottom = 413.0
 
+[node name="menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1055.0
+offset_top = 602.0
+offset_right = 1166.0
+offset_bottom = 658.0
+text = "menu"
+flat = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 15.0
+offset_right = 886.0
+offset_bottom = 730.0
+
+[node name="Label" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+text = "Mociones Principales"
+
+[node name="MotionSelector" type="OptionButton" parent="VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+text = "Propuesta por:"
+
+[node name="ProposedBy" type="LineEdit" parent="VBoxContainer2"]
+layout_mode = 2
+placeholder_text = "ProposedBy"
+
+[node name="Label3" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9982323, 0.97689956, 0.9764288, 1)
+text = "Secundada por:"
+
+[node name="SecondedBy" type="LineEdit" parent="VBoxContainer2"]
+layout_mode = 2
+placeholder_text = "SecondedBy"
+
+[node name="Label4" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9982323, 0.97689956, 0.9764288, 1)
+text = "Votos:"
+
+[node name="Votes" type="LineEdit" parent="VBoxContainer2"]
+layout_mode = 2
+placeholder_text = "votes"
+
+[node name="SaveMotion" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+text = "SaveMotion"
+
+[node name="MotionList" type="ItemList" parent="VBoxContainer2"]
+layout_mode = 2
+
+[node name="deletemotion" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+text = "Delete Motion"
+
 [connection signal="pressed" from="VBoxContainer/AplicarTiempoButton" to="." method="_on_aplicar_tiempo_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/AplicarTiempo2Button" to="." method="_on_aplicar_tiempo_2_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/StartPause2" to="." method="_on_start_pause_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Reset2" to="." method="_on_reset_2_pressed"]
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer2/deletemotion" to="." method="_on_deletemotion_pressed"]

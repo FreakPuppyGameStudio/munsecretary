@@ -30,6 +30,17 @@ offset_right = 730.0
 offset_bottom = 248.0
 text = "Enter"
 icon = SubResource("ImageTexture_y31r1")
+flat = true
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 574.0
+offset_top = 243.0
+offset_right = 726.0
+offset_bottom = 299.0
+text = "Attendence"
+icon = SubResource("ImageTexture_y31r1")
+flat = true
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -41,10 +52,22 @@ text = "MUN Secretary Program"
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 574.0
-offset_top = 271.0
-offset_right = 723.0
-offset_bottom = 345.0
+offset_left = 596.0
+offset_top = 347.0
+offset_right = 745.0
+offset_bottom = 421.0
 text = "Quit"
+flat = true
 
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 586.0
+offset_top = 293.0
+offset_right = 735.0
+offset_bottom = 367.0
+text = "Export"
+flat = true
+
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

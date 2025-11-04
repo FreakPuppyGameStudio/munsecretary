@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0nv16cuqfcqi"]
+
+[ext_resource type="Script" uid="uid://dca0exxga4tta" path="res://asistance.gd" id="1_6ok6b"]
+[ext_resource type="Texture2D" uid="uid://ck158au4ybvhe" path="res://Sobre sin texto acuarela suave azul rosa (1).png" id="2_ixa3c"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6ok6b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(761, 532)
+texture = ExtResource("2_ixa3c")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 52.0
+offset_right = 905.0
+offset_bottom = 633.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="AddButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "AddButton"
+
+[node name="PaisesContainer" type="FlowContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ResetButton" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = " ResetButton"
+
+[node name="SaveButton" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "SaveButton"
+
+[node name="Delete" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Delete all"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1008.0
+offset_top = 455.0
+offset_right = 1061.0
+offset_bottom = 486.0
+text = "Menu"
+flat = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 80.0
+offset_right = 350.0
+offset_bottom = 118.0
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/AddButton" to="." method="_on_add_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/Delete" to="." method="_on_delete_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
